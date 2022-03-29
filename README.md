@@ -1,8 +1,9 @@
 # Notebook
 My personal notebook.
 
-<details><summary>CLICK ME</summary>
-<p>
+<details>
+    <summary>CLICK ME</summary>
+
 
 We can hide anything, even code!
 
@@ -10,5 +11,5 @@ We can hide anything, even code!
       puts "Hello World"
     ```
 
-</p>
+
 </details>
