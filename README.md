@@ -8,7 +8,7 @@ My personal notebook.
 We can hide anything, even code!
 
 ```
-puts "Hello World"
+    puts "Hello World"
 ```
 
     </p>
