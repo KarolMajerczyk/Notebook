@@ -2,7 +2,7 @@
 My personal notebook.
 
 <details><summary>CLICK ME</summary>
-<p>
+
 
 #### We can hide anything, even code!
 
@@ -10,7 +10,6 @@ My personal notebook.
       puts "Hello World"
     ```
 
-</p>
   
   <details><summary>CLICK ME</summary>
 <p>
