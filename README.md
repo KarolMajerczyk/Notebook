@@ -11,7 +11,7 @@ We can hide anything, even code!
     puts "Hello World"
 ```
 
-    </p>
+</p>
 </details>
 
 <details><summary>CLICK ME</summary>
