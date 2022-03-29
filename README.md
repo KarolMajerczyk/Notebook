@@ -7,9 +7,9 @@ My personal notebook.
 <p>
 We can hide anything, even code!
 
-    ```ruby
-      puts "Hello World"
-    ```
+```
+puts "Hello World"
+```
 
     </p>
 </details>
@@ -19,9 +19,9 @@ We can hide anything, even code!
 
 #### We can hide anything, even code!
 
-    ```ruby
-      puts "Hello World"
-    ```
+```
+    puts "Hello World"
+```
 
 </p>
 </details>
