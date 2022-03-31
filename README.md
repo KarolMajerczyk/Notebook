@@ -173,18 +173,164 @@ Metadata elements, such as link, meta, title, and style, typically go inside the
 
 <details><summary>CSS</summary>
   
+CSS, or Cascading Style Sheets, tell the browser how to display the text and other content that you write in HTML. With CSS, you can control the color, font, size, spacing, and many other aspects of HTML elements.
+  
+  We can do this by changing the style of your h2 element.
+  
+  color style property - change text color
+  
+  <h2 style="color: blue;">CatPhotoApp</h2>
+  
+  It is a good practice to end inline style declarations with a ; .
+  
+  <h2 style="color: red;">CatPhotoApp</h2> - styling that individual h2 element with inline CSS, which stands for Cascading Style Sheets.
+  
+  there's a better way to apply CSS. style block
+  
+  <style>
+</style>
+  
+  Inside that style block, you can create a CSS selector for all h2 elements adding style definition with style rules.
+  
+  <style>
+  h2 {
+    color: red;
+  }
+</style>
+  
+  Classes are reusable styles that can be added to HTML elements.
+  
+  <style>
+  .blue-text {
+    color: blue;
+  }
+</style>
+  
+  You can apply a class to an HTML element like this: <h2 class="blue-text">CatPhotoApp</h2>.
+  In your HTML elements' class attribute, the class name does not include the period.
+  Classes allow you to use the same CSS styles on multiple HTML elements.
   
   
+  Font size is controlled by the font-size CSS property, like this:
   
+  h1 {
+  font-size: 30px;
+}
   
+  You can set which font an element should use, by using the font-family property.
   
+  h2 {
+  font-family: sans-serif;
+}
   
+  In addition to specifying common fonts that are found on most operating systems, we can also specify non-standard, custom web fonts for use on our website.
+  Google Fonts is a free library of web fonts that you can use in your CSS by referencing the font's URL.
   
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
   
+  Now you can use the Lobster font in your CSS by using Lobster as the FAMILY_NAME as in the following example:
   
+  font-family: FAMILY_NAME, GENERIC_NAME;
   
+  The GENERIC_NAME is optional, and is a fallback font in case the other specified font is not available.
   
+  Family names are case-sensitive and need to be wrapped in quotes if there is a space in the name. You need quotes to use the "Open Sans" font, but not to use the Lobster font.
+  
+  There are several default fonts that are available in all browsers. These generic font families include monospace, serif and sans-serif.
+  
+  When one font isn't available, you can tell the browser to "degrade" to another font.
 
+  p {
+  font-family: Helvetica, sans-serif;
+}
+  
+  Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS keywords.
+  
+CSS has a property called width that controls an element's width. Just like with fonts, we'll use px (pixels) to specify the image's width.
+  
+  <style>
+  .larger-image {
+    width: 500px;
+  }
+</style>
+  
+  CSS borders have properties like style, color and width.
+  
+  <style>
+  .thin-red-border {
+    border-color: red;
+    border-width: 5px;
+    border-style: solid;
+  }
+</style>
+  
+   you can apply multiple classes to an element using its class attribute, by separating each class name with a space. 
+  
+  <img class="class1 class2">
+  
+  We can round out those corners with a CSS property called border-radius. You can specify a border-radius with pixels.
+  In addition to pixels, you can also specify the border-radius using a percentage.
+  
+  You can set an element's background color with the background-color property.
+  
+  .green-background {
+  background-color: green;
+}
+  
+  In addition to classes, each HTML element can also have an id attribute.
+  
+   You can use an id to style a single element and you can use them to select and modify specific elements with JavaScript.
+  id attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice.
+  
+  <h2 id="cat-photo-app">
+  
+  id attributes is that, like classes, you can style them using CSS.
+
+However, an id is not reusable and should only be applied to one element. An id also has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
+  
+  #cat-photo-element {
+  background-color: green;
+}
+  
+  Note that inside your style element, you always reference classes by putting a . in front of their names. You always reference ids by putting a # in front of their names.
+  
+    All HTML elements are essentially little rectangles. Three important properties control the space that surrounds each HTML element: padding, border, and margin. An element's padding controls the amount of space between the element's content and its border.
+    
+    An element's margin controls the amount of space between an element's border and surrounding elements. If you set an element's margin to a negative value, the element will grow larger.
+     
+    CSS allows you to control the padding of all four individual sides of an element with the padding-top, padding-right, padding-bottom, and padding-left properties.
+    
+    or padding: 10px 20px 10px 20px; - These four values work like a clock: top, right, bottom, left
+
+CSS allows you to control the margin of all four individual sides of an element with the margin-top, margin-right, margin-bottom, and margin-left properties.
+    
+    or margin: 10px 20px 10px 20px; - These four values work like a clock: top, right, bottom, left
+    
+    
+    You have been adding id or class attributes to elements that you wish to specifically style. These are known as ID and class selectors. There are other CSS Selectors you can use to select custom groups of elements to style.
+    
+  [attr=value] attribute selector to style the checkboxes - This selector matches and styles elements with a specific attribute value.
+    
+    [type='radio'] {
+  margin: 20px 0px 20px 0px;
+}
+    
+Pixels are a type of length unit, which is what tells the browser how to size or space an item. In addition to px, CSS has a number of different length unit options that you can use.    
+    
+The two main types of length units are absolute and relative. Absolute units tie to physical units of length. For example, in and mm refer to inches and millimeters, respectively. Absolute length units approximate the actual measurement on a screen, but there are some differences depending on a screen's resolution.    
+    
+ Relative units, such as em or rem, are relative to another length value. For example, em is based on the size of an element's font. If you use it to set the font-size property itself, it's relative to the parent's font-size.   
+    
+There are several relative unit options that are tied to the size of the viewport.   
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </details>
 
 <details><summary>JavaScript</summary>
