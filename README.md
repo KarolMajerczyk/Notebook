@@ -20,29 +20,40 @@ My personal notebook.
 <p>HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</p>
   
 <details>
-  <summary>Elements</summary>
+  <summary>Concepts</summary>
 </details>
 
 <details>
-  <summary>SEO</summary>
+  <summary>Selectors</summary>
 </details>
 
 <details>
-  <summary>Accessibility</summary>
+  <summary>Properties</summary>
 </details>
 
+<details>
+  <summary>Flexbox</summary>
+</details>
+
+<details>
+  <summary>Grid</summary>
+</details>
 
 <h1>JavaScript</h1>
 <p>HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</p>
   
 <details>
-  <summary>Elements</summary>
+  <summary>Concepts</summary>
 </details>
 
 <details>
-  <summary>SEO</summary>
+  <summary>Data types</summary>
 </details>
 
 <details>
-  <summary>Accessibility</summary>
+  <summary>Loops</summary>
+</details>
+
+<details>
+  <summary>Conditions</summary>
 </details>
