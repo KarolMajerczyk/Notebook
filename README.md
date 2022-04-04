@@ -7,7 +7,7 @@ My personal notebook.
 <details>
    <summary>Important concepts</summary>
   
-  #### fafds
+  ** Important **
 
   gjgjhghjh
   
