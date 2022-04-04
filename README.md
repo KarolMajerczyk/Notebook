@@ -7,9 +7,7 @@ My personal notebook.
 <details>
    <summary>Important concepts</summary>
   
-  **Important**
-
-  gjgjhghjh
+  
   
 </details>
   
@@ -27,9 +25,12 @@ My personal notebook.
 
 ## CSS
 <p>HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</p>
-  
+
 <details>
-  <summary>Concepts</summary>
+   <summary>Important concepts</summary>
+  
+  
+  
 </details>
 
 <details>
@@ -46,9 +47,12 @@ My personal notebook.
 
 ## JavaScript
 <p>HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</p>
-  
+
 <details>
-  <summary>Concepts</summary>
+   <summary>Important concepts</summary>
+  
+  
+  
 </details>
 
 <details>
