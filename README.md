@@ -8,6 +8,7 @@ My personal notebook.
    <summary>Important concepts</summary>
   
   ##### fafds
+  gfnn
   
 </details>
   
