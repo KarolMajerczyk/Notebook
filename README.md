@@ -164,6 +164,7 @@ Pseudo-elements
 operators
   
   https://github.com/leonardomso/33-js-concepts#33-clean-code
+  https://javascript.info/
   
 </details>
 
