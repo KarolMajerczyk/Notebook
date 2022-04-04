@@ -32,11 +32,7 @@ My personal notebook.
 </details>
 
 <details>
-  <summary>Flexbox</summary>
-</details>
-
-<details>
-  <summary>Grid</summary>
+  <summary>Layout</summary>
 </details>
 
 ## JavaScript
