@@ -1,7 +1,7 @@
 # Notebook
 My personal notebook.
 
-<h1>HTML</h1>
+## HTML
 <p>HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</p>
   
 <details>
@@ -16,7 +16,7 @@ My personal notebook.
   <summary>Accessibility</summary>
 </details>
 
-<h1>CSS</h1>
+## CSS
 <p>HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</p>
   
 <details>
@@ -39,7 +39,7 @@ My personal notebook.
   <summary>Grid</summary>
 </details>
 
-<h1>JavaScript</h1>
+## JavaScript
 <p>HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</p>
   
 <details>
