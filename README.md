@@ -267,15 +267,76 @@ Inside that style block, you can create a CSS selector for all h2 elements and a
 
 Note that it's important to have both opening and closing curly braces ({ and }) around each element's style rule(s). You also need to make sure that your element's style definition is between the opening and closing style tags. Finally, be sure to add a semicolon to the end of each of your element's style rules.
 
-Classes are reusable styles that can be added to HTML elements. Class declaration:
+Classes are reusable styles that can be added to HTML elements. Classes allow you to use the same CSS styles on multiple HTML elements. Class declaration:
 
-```
+```css
 <style>
   .blue-text {
     color: blue;
   }
 </style>
 ```
+
+Note that in your CSS style element, class names start with a period. In your HTML elements' class attribute, the class name does not include the period. You can apply a class attribute to an HTML element like this:
+
+```html
+<h2 class="blue-text">CatPhotoApp</h2>
+```
+
+Font size is controlled by the font-size CSS property.
+
+```css
+h1 {
+  font-size: 30px;
+}
+```
+
+You can set which font an element should use, by using the font-family property.
+
+```css
+h2 {
+  font-family: sans-serif;
+}
+```
+
+In addition to specifying common fonts that are found on most operating systems, we can also specify non-standard, custom web fonts for use on our website. There are many sources for web fonts on the Internet. For this example we will focus on the Google Fonts library.
+
+Google Fonts is a free library of web fonts that you can use in your CSS by referencing the font's URL.
+
+So, let's go ahead and import and apply a Google font (note that if Google is blocked in your country, you will need to skip this challenge).
+
+To import a Google Font, you can copy the font's URL from the Google Fonts library and then paste it in your HTML. For this challenge, we'll import the Lobster font. To do this, copy the following code snippet and paste it into the top of your code editor (before the opening style element):
+
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+Now you can use the Lobster font in your CSS by using Lobster as the FAMILY_NAME as in the following example:
+
+font-family: FAMILY_NAME, GENERIC_NAME;
+The GENERIC_NAME is optional, and is a fallback font in case the other specified font is not available. This is covered in the next challenge.
+
+Family names are case-sensitive and need to be wrapped in quotes if there is a space in the name. For example, you need quotes to use the "Open Sans" font, but not to use the Lobster font.
+
+There are several default fonts that are available in all browsers. These generic font families include monospace, serif and sans-serif.
+
+When one font isn't available, you can tell the browser to "degrade" to another font.
+
+For example, if you wanted an element to use the Helvetica font, but degrade to the sans-serif font when Helvetica isn't available, you will specify it as follows:
+
+p {
+font-family: Helvetica, sans-serif;
+}
+
+Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS keywords.
+
+CSS has a property called width that controls an element's width. Just like with fonts, we'll use px (pixels) to specify the image's width.
+
+For example, if we wanted to create a CSS class called larger-image that gave HTML elements a width of 500 pixels, we'd use:
+
+<style>
+  .larger-image {
+    width: 500px;
+  }
+</style>
 
 </details>
 
