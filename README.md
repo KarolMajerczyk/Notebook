@@ -204,6 +204,53 @@ When a form gets submitted, the data is sent to the server and includes entries 
 
 When the user submits the form with the indoor option selected, the form data will include the line: indoor-outdoor=indoor. This is from the name and value attributes of the "indoor" input. If you omit the value attribute, the submitted form data uses the default value, which is on. In this scenario, if the user clicked the "indoor" option and submitted the form, the resulting form data would be indoor-outdoor=on, which is not useful. So the value attribute needs to be set to something to identify the option.
 
-</details>
+You can set a checkbox or radio button to be checked by default using the checked attribute.
+
 ```html
+<input type="radio" name="test-name" checked />
+```
+
+The div element (division element) is a general purpose container for other elements. The div element is probably the most commonly used HTML element of all. Just like any other non-self-closing element, you can open a div element with <div> and close it on another line with </div>.
+
+There are a few elements that give overall structure to your page, and should be included in every HTML document. At the top of your document, you need to tell the browser which version of HTML your page is using. HTML is an evolving language, and is updated regularly. Most major browsers support the latest specification, which is HTML5. However, older web pages may use previous versions of the language.
+
+You tell the browser this information by adding the <!DOCTYPE ...> tag on the first line, where the ... part is the version of HTML. For HTML5, you use <!DOCTYPE html>. The ! and uppercase DOCTYPE is important, especially for older browsers. The html is not case sensitive.
+
+Next, the rest of your HTML code needs to be wrapped in html tags. The opening <html> goes directly below the <!DOCTYPE html> line, and the closing </html> goes at the end of the page. Your HTML code would go in the space between the two html tags.
+
+```html
+<!DOCTYPE html>
+<html></html>
+```
+
+You can add another level of organization in your HTML document within the html tags with the head and body elements. Any markup with information about your page would go into the head tag. Then any markup with the content of the page (what displays for a user) would go into the body tag. Metadata elements, such as link, meta, title, and style, typically go inside the head element.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta />
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
+```
+
+</details>
+
+<details><summary>Basic CSS</summary>
+
+CSS, or Cascading Style Sheets, tell the browser how to display the text and other content that you write in HTML. With CSS, you can control the color, font, size, spacing, and many other aspects of HTML elements.
+
+Now let's change the color of some of our text.
+
+We can do this by changing the style of your h2 element.
+
+The property that is responsible for the color of an element's text is the color style property.
+
+</details>
+
+```css
+
 ```
