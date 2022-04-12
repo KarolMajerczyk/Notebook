@@ -21,5 +21,5 @@ Developers use two main languages to build webpages:
 
 ```javascript
 var s = "JavaScript syntax highlighting";
-alert(s);
+alert(sdsa);
 ```
