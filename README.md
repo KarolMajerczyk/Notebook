@@ -2,15 +2,17 @@
 
 FreeCodeCamp Tutorial and MDN Guide Notes.
 
-## HTML
+## Responsive Web Design Certification
 
-What is HTML?
+Developers use two main languages to build webpages:
 
-HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!
+- HTML (Hypertext Markup Language) for content
+- CSS (Cascading Style Sheets) for design
 
 <details>
-   <summary>Important concepts</summary>
-  
+   <summary>Basic HTML and HTML5</summary>
+
+
 </details>
 
 ```javascript
