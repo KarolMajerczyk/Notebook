@@ -29,7 +29,7 @@ Heading element tells the browser about the structure of your website. h1 elemen
 The p element is the preferred element for paragraph text on websites. p is short for "paragraph".
 
 ```html
-<p>I'm a p tag!</p>
+<p>Paragraph tag!</p>
 ```
 
 </details>
