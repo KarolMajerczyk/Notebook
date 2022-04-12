@@ -36,6 +36,10 @@ Note: As a convention, all HTML tags are written in lowercase, for example <p></
 
 Web developers traditionally use lorem ipsum text as placeholder text. The lorem ipsum text is randomly scraped from a famous passage by Cicero of Ancient Rome. Lorem ipsum text has been used as placeholder text by typesetters since the 16th century, and this tradition continues on the web.
 
-Commenting is a way that you can leave comments for other developers within your code without affecting the resulting output that is displayed to the end user. Commenting is also a convenient way to make code inactive without having to delete it entirely. Comments in HTML start with <!-- and end with a -->.
+Commenting is a way that you can leave comments for other developers within your code without affecting the resulting output that is displayed to the end user. Commenting is also a convenient way to make code inactive without having to delete it entirely.
+
+```html
+<!-- HTML comment -->
+```
 
 </details>
