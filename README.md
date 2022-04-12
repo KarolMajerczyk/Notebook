@@ -1,10 +1,11 @@
 # Notebook
-My personal notebook.
+
+FreeCodeCamp Tutorial and MDN Guide Notes.
 
 ## HTML
 
 What is HTML?
-	ddrw
+
 
 HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!
   
