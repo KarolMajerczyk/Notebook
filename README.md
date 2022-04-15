@@ -1609,6 +1609,72 @@ Using the align-items property on a grid container will set the vertical alignme
 
 align-items: end;
 
+You can group cells of your grid together into an area and give the area a custom name. Do this by using grid-template-areas on the container like this:
+
+grid-template-areas:
+"header header header"
+"advert content content"
+"advert footer footer";
+
+The code above groups the cells of the grid into four areas; header, advert, content, and footer. Every word represents a cell and every pair of quotation marks represent a row.
+
+After creating an area template for your grid container, as shown in the previous challenge, you can place an item in your custom area by referencing the name you gave it. To do this, you use the grid-area property on an item like this:
+
+.item1 {
+grid-area: header;
+}
+This lets the grid know that you want the item1 class to go in the area named header. In this case, the item will use the entire top row because that whole row is named as the header area.
+
+The grid-area property you learned in the last challenge can be used in another way. If your grid doesn't have an areas template to reference, you can create an area on the fly for an item to be placed like this:
+
+item1 { grid-area: 1/1/2/4; }
+This is using the line numbers you learned about earlier to define where the area for this item will be. The numbers in the example above represent these values:
+
+grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
+
+So the item in the example will consume the rows between lines 1 and 2, and the columns between lines 1 and 4.
+
+When you used grid-template-columns and grid-template-rows to define the structure of a grid, you entered a value for each row or column you created.
+
+Let's say you want a grid with 100 rows of the same height. It isn't very practical to insert 100 values individually. Fortunately, there's a better way - by using the repeat function to specify the number of times you want your column or row to be repeated, followed by a comma and the value you want to repeat.
+
+Here's an example that would create the 100 row grid, each row at 50px tall.
+
+grid-template-rows: repeat(100, 50px);
+You can also repeat multiple values with the repeat function and insert the function amongst other values when defining a grid structure. Here's what that looks like:
+
+grid-template-columns: repeat(2, 1fr 50px) 20px;
+
+This translates to:
+
+grid-template-columns: 1fr 50px 1fr 50px 20px;
+
+Note: The 1fr 50px is repeated twice followed by 20px.
+
+There's another built-in function to use with grid-template-columns and grid-template-rows called minmax. It's used to limit the size of items when the grid container changes size. To do this you need to specify the acceptable size range for your item. Here is an example:
+
+grid-template-columns: 100px minmax(50px, 200px);
+
+In the code above, grid-template-columns is set to create two columns; the first is 100px wide, and the second has the minimum width of 50px and the maximum width of 200px.
+
+The repeat function comes with an option called auto-fill. This allows you to automatically insert as many rows or columns of your desired size as possible depending on the size of the container. You can create flexible layouts when combining auto-fill with minmax, like this:
+
+repeat(auto-fill, minmax(60px, 1fr));
+
+When the container changes size, this setup keeps inserting 60px columns and stretching them until it can insert another one. Note: If your container can't fit all your items on one row, it will move them down to a new one.
+
+auto-fit works almost identically to auto-fill. The only difference is that when the container's size exceeds the size of all the items combined, auto-fill keeps inserting empty rows or columns and pushes your items to the side, while auto-fit collapses those empty rows or columns and stretches your items to fit the size of the container.
+
+Note: If your container can't fit all your items on one row, it will move them down to a new one.
+
+CSS Grid can be an easy way to make your site more responsive by using media queries to rearrange grid areas, change dimensions of a grid, and rearrange the placement of items.
+
+In the preview, when the viewport width is 300px or more, the number of columns changes from 1 to 2. The advertisement area then occupies the left column completely.
+
+Turning an element into a grid only affects the behavior of its direct descendants. So by turning a direct descendant into a grid, you have a grid within a grid.
+
+For example, by setting the display and grid-template-columns properties of the element with the item3 class, you create a grid within your grid.
+
 </details>
 
 <details><summary>Responsive Web Design Projects</summary>
