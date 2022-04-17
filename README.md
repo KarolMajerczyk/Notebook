@@ -8,9 +8,7 @@ FreeCodeCamp Notes
 
 HTML is a markup language that uses a special syntax or notation to describe the structure of a webpage to the browser. HTML elements usually have opening and closing tags that surround and give meaning to content. For example, different elements can describe text as a heading, paragraph, or list item. HTML elements are the building blocks of any webpage.
 
-Most HTML elements have an opening tag and a closing tag. The only difference between opening and closing tags is the forward slash after the opening bracket of a closing tag.
-
-For example this is a heading element with opening and closing tag:
+Most HTML elements have an opening tag and a closing tag. The only difference between opening and closing tags is the forward slash after the opening bracket of a closing tag. For example this is a heading element with opening and closing tag:
 
 ```html
 <h1>Main heading element</h1>
@@ -75,7 +73,6 @@ a (anchor) elements can also be used to create internal links to jump to differe
 
 ```html
 <a href="#contacts-header">Contacts</a>
-...
 <h2 id="contacts-header">Contacts</h2>
 ```
 
@@ -239,11 +236,13 @@ You can add another level of organization in your HTML document within the html 
 
 </details>
 
+---
+
 <details><summary>Basic CSS</summary>
 
 CSS, or Cascading Style Sheets, tell the browser how to display the text and other content that you write in HTML. With CSS, you can control the color, font, size, spacing, and many other aspects of HTML elements.
 
-With CSS, there are hundreds of CSS properties that you can use to change the way an element looks on your page. For example the property that is responsible for the color of an element's text is the color style property. Note that it is a good practice to end inline style declarations with a ;.
+With CSS, there are hundreds of CSS properties that you can use to change the way an element looks on your page. For example the property that is responsible for the color of an element's text is the color style property. It is a good practice to end inline style declarations with a semicolon ";".
 
 ```css
 <h2 style="color: blue;">CatPhotoApp</h2>
@@ -258,11 +257,9 @@ With code above, you were styling that individual h2 element with inline CSS, wh
 Inside that style block, you can create a CSS selector for all h2 elements and add a style rule.
 
 ```css
-<style>
-  h2 {
-    color: red;
-  }
-</style>
+h2 {
+  color: red;
+}
 ```
 
 Note that it's important to have both opening and closing curly braces ({ and }) around each element's style rule(s). You also need to make sure that your element's style definition is between the opening and closing style tags. Finally, be sure to add a semicolon to the end of each of your element's style rules.
@@ -270,11 +267,9 @@ Note that it's important to have both opening and closing curly braces ({ and })
 Classes are reusable styles that can be added to HTML elements. Classes allow you to use the same CSS styles on multiple HTML elements. Class declaration:
 
 ```css
-<style>
-  .blue-text {
-    color: blue;
-  }
-</style>
+.blue-text {
+  color: blue;
+}
 ```
 
 Note that in your CSS style element, class names start with a period. In your HTML elements' class attribute, the class name does not include the period. You can apply a class attribute to an HTML element like this:
@@ -323,22 +318,20 @@ Family names are case-sensitive and need to be wrapped in quotes if there is a s
 
 CSS has a property called width that controls an element's width.
 
-<style>
-  .larger-image {
-    width: 500px;
-  }
-</style>
+```css
+.larger-image {
+  width: 500px;
+}
+```
 
 CSS borders have properties like style, color and width.
 
 ```css
-<style>
-  .thin-red-border {
-    border-color: red;
-    border-width: 5px;
-    border-style: solid;
-  }
-</style>
+.thin-red-border {
+  border-color: red;
+  border-width: 5px;
+  border-style: solid;
+}
 ```
 
 We can round out corners with a CSS property called border-radius. In addition to pixels, you can also specify the border-radius using a percentage. For example 50% will create a circle;
@@ -357,9 +350,7 @@ You can set an element's background color with the background-color property.
 }
 ```
 
-In addition to classes, each HTML element can also have an id attribute.
-
-There are several benefits to using id attributes: You can use an id to style a single element and you can use them to select and modify specific elements with JavaScript. id attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice. Don't give more than one element the same id attribute.
+In addition to classes, each HTML element can also have an id attribute. There are several benefits to using id attributes: You can use an id to style a single element and you can use them to select and modify specific elements with JavaScript. id attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice. Don't give more than one element the same id attribute.
 
 ```css
 <h2 id="cat-photo-app">
@@ -441,8 +432,6 @@ The [attr=value] attribute selector matches and styles elements with a specific 
 }
 ```
 
-8888888888888888888
-
 The last several challenges all set an element's margin or padding with pixels (px). Pixels are a type of length unit, which is what tells the browser how to size or space an item. In addition to px, CSS has a number of different length unit options that you can use.
 
 The two main types of length units are absolute and relative. Absolute units tie to physical units of length. For example, in and mm refer to inches and millimeters, respectively. Absolute length units approximate the actual measurement on a screen, but there are some differences depending on a screen's resolution.
@@ -450,8 +439,6 @@ The two main types of length units are absolute and relative. Absolute units tie
 Relative units, such as em or rem, are relative to another length value. For example, em is based on the size of an element's font. If you use it to set the font-size property itself, it's relative to the parent's font-size.
 
 Note: There are several relative unit options that are tied to the size of the viewport. They are covered in the Responsive Web Design Principles section.
-
-Now let's start fresh and talk about CSS inheritance.
 
 Every HTML page has a body element.
 
@@ -628,6 +615,8 @@ For instance, when your screen is smaller or larger than your media query break 
 
 </details>
 
+---
+
 <details><summary>Applied Visual Design</summary>
 
 Visual design is a combination of typography, color theory, graphics, animation, page layout, and more to help deliver your unique message.
@@ -679,6 +668,7 @@ r = red
 g = green
 b = blue
 a = alpha/level of opacity
+
 The RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. rgba() is great to use in this case, as it allows you to adjust the opacity. This means you don't have to completely block out the background.
 
 You'll use background-color: rgba(45, 45, 45, 0.1) for this challenge. It produces a dark gray color that is nearly transparent given the low opacity value of 0.1.
@@ -1168,6 +1158,8 @@ cubic-bezier(0.3, 0.4, 0.5, 1.6);
 Notice that the value of y2 is larger than 1. Although the cubic Bezier curve is mapped on a 1 by 1 coordinate system, and it can only accept x values from 0 to 1, the y value can be set to numbers larger than one. This results in a bouncing movement that is ideal for simulating the juggling ball.
 
   </details>
+
+---
 
 <details><summary>Applied Accessibility</summary>
 
