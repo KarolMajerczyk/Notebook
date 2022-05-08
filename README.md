@@ -6818,6 +6818,205 @@ return a.filter(item => b.indexOf(item) === -1);
 }
 }
 
+You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+
+Note: You have to use the arguments object.
+
+function destroyer(arr) {
+let valsToRemove = Object.values(arguments).slice(1);
+
+for (let i = 0; i < arr.length; i++) {
+for (let j = 0; j < valsToRemove.length; j++) {
+if (arr[i] === valsToRemove[j]) {
+delete arr[i];
+}
+}
+}
+return arr.filter(item => item !== null);
+}
+
+Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
+
+For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.
+
+function whatIsInAName(collection, source) {
+const souceKeys = Object.keys(source);
+
+return collection.filter(obj => {
+for (let i = 0; i < souceKeys.length; i++) {
+if (!obj.hasOwnProperty(souceKeys[i]) ||
+obj[souceKeys[i]] !== source[souceKeys[i]]) {
+return false;
+}
+}
+return true;
+});
+}
+
+whatIsInAName(
+[
+{ first: "Romeo", last: "Montague" },
+{ first: "Mercutio", last: null },
+{ first: "Tybalt", last: "Capulet" }
+],
+{ last: "Capulet" }
+);
+
+Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+
+function spinalCase(str) {
+// Create a variable for the white space and underscores.
+var regex = /\s+|\_+/g;
+
+// Replace low-upper case to low-space-uppercase
+str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+
+// Replace space and underscore with -
+return str.replace(regex, "-").toLowerCase();
+}
+
+// test here
+spinalCase("This Is Spinal Tap");
+
+Pig Latin is a way of altering English Words. The rules are as follows:
+
+- If a word begins with a consonant, take the first consonant or consonant cluster, move it to the end of the word, and add ay to it.
+
+- If a word begins with a vowel, just add way at the end.
+
+function translatePigLatin(str) {
+let consonantRegex = /^[^aeiou]+/;
+let myConsonants = str.match(consonantRegex);
+return myConsonants !== null
+? str
+.replace(consonantRegex, "")
+.concat(myConsonants)
+.concat("ay")
+: str.concat("way");
+}
+
+translatePigLatin("consonant");
+
+Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+
+First argument is the sentence to perform the search and replace on.
+
+Second argument is the word that you will be replacing (before).
+
+Third argument is what you will be replacing the second argument with (after).
+
+Note: Preserve the case of the first character in the original word when you are replacing it. For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
+
+function myReplace(str, before, after) {
+// Check if first character of argument "before" is a capital or lowercase letter and change the first character of argument "after" to match the case
+if (/^[A-Z]/.test(before)) {
+after = after[0].toUpperCase() + after.substring(1)
+} else {
+after = after[0].toLowerCase() + after.substring(1)
+}
+
+// return string with argument "before" replaced by argument "after" (with correct case)
+return str.replace(before, after);
+}
+
+// test here
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+
+The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
+
+Base pairs are a pair of AT and CG. Match the missing element to the provided character.
+
+Return the provided character as the first element in each array.
+
+For example, for the input GCG, return [["G", "C"], ["C","G"], ["G", "C"]]
+
+The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
+
+function pairElement(str) {
+const pairs = {
+A: "T",
+T: "A",
+C: "G",
+G: "C"
+};
+
+const arr = str.split("");
+return arr.map(x => [x, pairs[x]]);
+}
+
+pairElement("GCG");
+
+Find the missing letter in the passed letter range and return it.
+
+If all letters are present in the range, return undefined.
+
+function fearNotLetter(str) {
+const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+let startIndex = alphabet.indexOf(str[0]);
+
+for (let i = 0; i < str.length; i++, startIndex++) {
+if (str[i] !== alphabet[startIndex]) {
+return alphabet[startIndex];
+}
+}
+
+return undefined;
+}
+
+fearNotLetter("abcdefghijklmnopqrstuvwxyz")
+
+Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays.
+
+In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array.
+
+The unique numbers should be sorted by their original order, but the final array should not be sorted in numerical order.
+
+Check the assertion tests for examples.
+
+function uniteUnique(arr1, arr2, arr3) {
+const finalArray = [];
+
+for (let i = 0; i < arguments.length; i++) {
+const arrayArguments = arguments[i];
+
+    for (let j = 0; j < arrayArguments.length; j++) {
+      let indexValue = arrayArguments[j];
+
+      if (finalArray.indexOf(indexValue) < 0) {
+        finalArray.push(indexValue);
+      }
+    }
+
+}
+
+return finalArray;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+
+function convertHTML(str) {
+const htmlEntities = {
+"&": "&amp;",
+"<": "&lt;",
+">": "&gt;",
+'"': "&quot;",
+"'": "&apos;"
+};
+
+return str.replace(/([&<>\"'])/g, match => htmlEntities[match]);
+}
+
+convertHTML("Dolce & Gabbana");
+
+Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
+
+The first two numbers in the Fibonacci sequence are 1 and 1. Every additional number in the sequence is the sum of the two previous numbers. The first six numbers of the Fibonacci sequence are 1, 1, 2, 3, 5 and 8.
+
+For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less than or equal to 10 are 1, 1, 3, and 5.
+
 </details>
 
 <details><summary>JavaScript Algorithms and Data Structures Projects</summary>
