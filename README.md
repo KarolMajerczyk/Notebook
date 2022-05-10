@@ -7039,6 +7039,76 @@ A prime number is a whole number greater than 1 with exactly two divisors: 1 and
 
 Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
 
+function sumPrimes(num) {
+// Helper function to check primality
+function isPrime(num) {
+for (let i = 2; i <= Math.sqrt(num); i++) {
+if (num % i == 0)
+return false;
+}
+return true;
+}
+
+// Check all numbers for primality
+let sum = 0;
+for (let i = 2; i <= num; i++) {
+if (isPrime(i))
+sum += i;
+}
+return sum;
+}
+
+Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.
+
+The range will be an array of two numbers that will not necessarily be in numerical order.
+
+For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers between 1 and 3. The answer here would be 6.
+
+function smallestCommons(arr) {
+// Setup
+const [min, max] = arr.sort((a, b) => a - b);
+const numberDivisors = max - min + 1;
+// Largest possible value for SCM
+let upperBound = 1;
+for (let i = min; i <= max; i++) {
+upperBound \*= i;
+}
+// Test all multiples of 'max'
+for (let multiple = max; multiple <= upperBound; multiple += max) {
+// Check if every value in range divides 'multiple'
+let divisorCount = 0;
+for (let i = min; i <= max; i++) {
+// Count divisors
+if (multiple % i === 0) {
+divisorCount += 1;
+}
+}
+if (divisorCount === numberDivisors) {
+return multiple;
+}
+}
+}
+
+smallestCommons([1, 5]);
+
+Given the array arr, iterate through and remove each element starting from the first element (the 0 index) until the function func returns true when the iterated element is passed through it.
+
+Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
+
+function dropElements(arr, func) {
+while (arr.length > 0 && !func(arr[0])) {
+arr.shift();
+}
+return arr;
+}
+
+// test here
+dropElements([1, 2, 3, 4], function(n) {
+return n >= 3;
+});
+
+Flatten a nested array. You must account for varying levels of nesting.
+
 </details>
 
 <details><summary>JavaScript Algorithms and Data Structures Projects</summary>
