@@ -7254,6 +7254,192 @@ orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
 <details><summary>JavaScript Algorithms and Data Structures Projects</summary>
 </details>
 
+<details><summary>Projects</summary>
+
+Build a Tribute Page
+
+Objective: Build an app that is functionally similar to https://tribute-page.freecodecamp.rocks
+
+User Stories:
+
+Your tribute page should have an element with a corresponding id="main", which contains all other elements
+You should see an element with an id of title, which contains a string (i.e. text), that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug")
+You should see either a figure or a div element with an id of img-div
+Within the img-div element, you should see an img element with a corresponding id="image"
+Within the img-div element, you should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in img-div
+You should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page
+You should see an a element with a corresponding id="tribute-link", which links to an outside site, that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of target and set it to \_blank in order for your link to open in a new tab
+Your #image should use max-width and height properties to resize responsively, relative to the width of its parent element, without exceeding its original size
+Your img element should be centered within its parent element
+Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+Build a Survey Form
+
+Objective: Build an app that is functionally similar to https://survey-form.freecodecamp.rocks
+
+User Stories:
+
+You should have a page title in an h1 element with an id of title
+You should have a short explanation in a p element with an id of description
+You should have a form element with an id of survey-form
+Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text
+Inside the form element, you are required to enter your email in an input field that has an id of email
+If you enter an email that is not formatted correctly, you will see an HTML5 validation error
+Inside the form, you can enter a number in an input field that has an id of number
+If you enter non-numbers in the number input, you will see an HTML5 validation error
+If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error
+For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
+For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field
+Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from
+Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute
+Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute
+Inside the form element, you are presented with a textarea for additional comments
+Inside the form element, you are presented with a button with id of submit to submit all the inputs
+Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+Build a Product Landing Page
+
+Objective: Build an app that is functionally similar to https://product-landing-page.freecodecamp.rocks
+
+User Stories:
+
+Your product landing page should have a header element with a corresponding id="header"
+You can see an image within the header element with a corresponding id="header-img" (A logo would make a good image here)
+Within the #header element, you can see a nav element with a corresponding id="nav-bar"
+You can see at least three clickable elements inside the nav element, each with the class nav-link
+When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
+You can watch an embedded product video with id="video"
+Your landing page has a form element with a corresponding id="form"
+Within the form, there is an input field with id="email" where you can enter an email address
+The #email input field should have placeholder text to let users know what the field is for
+The #email input field uses HTML5 validation to confirm that the entered text is an email address
+Within the form, there is a submit input with a corresponding id="submit"
+When you click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit)
+The navbar should always be at the top of the viewport
+Your product landing page should have at least one media query
+Your product landing page should utilize CSS flexbox at least once
+Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+Build a Technical Documentation Page
+
+Objective: Build an app that is functionally similar to https://technical-documentation-page.freecodecamp.rocks
+
+User Stories:
+
+You can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation)
+Within the #main-doc element, you can see several section elements, each with a class of main-section. There should be a minimum of five
+The first element within each .main-section should be a header element, which contains text that describes the topic of that section.
+Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java")
+The .main-section elements should contain at least ten p elements total (not each)
+The .main-section elements should contain at least five code elements total (not each)
+The .main-section elements should contain at least five li items total (not each)
+You can see a nav element with a corresponding id="navbar"
+The navbar element should contain one header element which contains text that describes the topic of the technical documentation
+Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section
+The header element in the #navbar must come before any link (a) elements in the navbar
+Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world")
+When you click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If you click on a nav-link element that contains the text "Hello world", the page navigates to a section element with that id, and contains the corresponding header)
+On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user
+Your technical documentation should use at least one media query
+Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+Build a Personal Portfolio Webpage
+
+Build a Personal Portfolio Webpage
+Objective: Build an app that is functionally similar to https://personal-portfolio.freecodecamp.rocks
+
+User Stories:
+
+Your portfolio should have a welcome section with an id of welcome-section
+The welcome section should have an h1 element that contains text
+Your portfolio should have a projects section with an id of projects
+The projects section should contain at least one element with a class of project-tile to hold a project
+The projects section should contain at least one link to a project
+Your portfolio should have a navbar with an id of navbar
+The navbar should contain at least one link that you can click on to navigate to different sections of the page
+Your portfolio should have a link with an id of profile-link, which opens your GitHub or freeCodeCamp profile in a new tab
+Your portfolio should have at least one media query
+The height of the welcome section should be equal to the height of the viewport
+The navbar should always be at the top of the viewport
+Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+Palindrome Checker
+Return true if the given string is a palindrome. Otherwise, return false.
+
+A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.
+
+Note: You'll need to remove all non-alphanumeric characters (punctuation, spaces and symbols) and turn everything into the same case (lower or upper case) in order to check for palindromes.
+
+We'll pass strings with varying formats, such as racecar, RaceCar, and race CAR among others.
+
+We'll also pass strings with special symbols, such as 2A3*3a2, 2A3 3a2, and 2_A3*3#A2.
+
+Roman Numeral Converter
+Convert the given number into a roman numeral.
+
+All roman numerals answers should be provided in upper-case.
+
+Caesars Cipher
+One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher. In a shift cipher the meanings of the letters are shifted by some set amount.
+
+A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places. Thus A ↔ N, B ↔ O and so on.
+
+Write a function which takes a ROT13 encoded string as input and returns a decoded string.
+
+All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
+
+Telephone Number Validator
+Return true if the passed string looks like a valid US phone number.
+
+The user may fill out the form field any way they choose as long as it has the format of a valid US number. The following are examples of valid formats for US numbers (refer to the tests below for other variants):
+
+555-555-5555
+(555)555-5555
+(555) 555-5555
+555 555 5555
+5555555555
+1 555 555 5555
+For this challenge you will be presented with a string such as 800-692-7753 or 8oo-six427676;laskdjf. Your job is to validate or reject the US phone number based on any combination of the formats provided above. The area code is required. If the country code is provided, you must confirm that the country code is 1. Return true if the string is a valid US phone number; otherwise return false.
+
+Cash Register
+Design a cash register drawer function checkCashRegister() that accepts purchase price as the first argument (price), payment as the second argument (cash), and cash-in-drawer (cid) as the third argument.
+
+cid is a 2D array listing available currency.
+
+The checkCashRegister() function should always return an object with a status key and a change key.
+
+Return {status: "INSUFFICIENT_FUNDS", change: []} if cash-in-drawer is less than the change due, or if you cannot return the exact change.
+
+Return {status: "CLOSED", change: [...]} with cash-in-drawer as the value for the key change if it is equal to the change due.
+
+Otherwise, return {status: "OPEN", change: [...]}, with the change due in coins and bills, sorted in highest to lowest order, as the value of the change key.
+
+Currency Unit Amount
+Penny $0.01 (PENNY)
+Nickel $0.05 (NICKEL)
+Dime $0.1 (DIME)
+Quarter $0.25 (QUARTER)
+Dollar $1 (ONE)
+Five Dollars $5 (FIVE)
+Ten Dollars $10 (TEN)
+Twenty Dollars $20 (TWENTY)
+One-hundred Dollars $100 (ONE HUNDRED)
+See below for an example of a cash-in-drawer array:
+
+[
+["PENNY", 1.01],
+["NICKEL", 2.05],
+["DIME", 3.1],
+["QUARTER", 4.25],
+["ONE", 90],
+["FIVE", 55],
+["TEN", 20],
+["TWENTY", 60],
+["ONE HUNDRED", 100]
+]
+
+</details>
+
 CZEGO LEKARZ CI NIE POWIE
 👉że poziom Witaminy D3 gwarantuje
 sprawne działanie układu
